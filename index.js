@@ -4,22 +4,29 @@ const server = express()
 const port = 3000
 
 
-let cars = []
+let task = []
 
 server.use(express.json())
 
 server.get("/api",(req,res) =>{
-    res.json("Hellooo world")
+    
+    res.json(task)
 }) 
 
 
 server.post("/api",(req,res) =>{
     
-    cars.push(req.body)
-    res.json(cars)
+    task.push(req.body)
+    res.json(task)
 }) 
+
+
 
 
 server.use(express.static("public"))
 
-server.listen(port,() => console.log("example app listening on ${port}"))
+server.listen(port,() => {
+    console.log("example app listening on ${port}")
+    
+
+})
