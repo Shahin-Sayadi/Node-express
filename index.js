@@ -7,7 +7,7 @@ let task = [];
 
 server.use(express.json());
 
-server.get("/weather", (req, res) => {
+server.get("/catInfo", (req, res) => {
   fetch("https://catfact.ninja/fact")
     .then((response) => {
       return response.json();

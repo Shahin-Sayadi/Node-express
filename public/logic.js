@@ -1,6 +1,6 @@
 async function getApi() {
     const textToDisplay = await makeRequest(
-        "http://localhost:3000/weather",
+        "http://localhost:3000/catInfo",
         "GET"
     );
     console.log(textToDisplay);
@@ -51,11 +51,15 @@ async function saveNew() {
     );
 }
 
-async function makeRequest(url, method, headers, body) {
+
+
+
+
+async function makeRequest(url, method, headers,body) {
     try {
         const response = await fetch(url, {
+            
             headers,
-
             method,
             body: JSON.stringify(body),
         });
