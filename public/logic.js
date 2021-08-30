@@ -1,3 +1,20 @@
+async function getApi() {
+    const textToDisplay = await makeRequest(
+        "http://localhost:3000/catInfo",
+        "GET"
+    );
+    console.log(textToDisplay);
+}
+getApi();
+
+async function getWeather() {
+    const textToDisplay = await makeRequest(
+        "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/71420/period/latest-hour/data.json",
+        "GET"
+    );
+    console.log(textToDisplay);
+}
+getWeather();
 
 
 
@@ -46,10 +63,11 @@ async function saveNew() {
 
 
 
-async function makeRequest(url, method, body) {
+async function makeRequest(url, method, headers,body) {
     try {
         const response = await fetch(url, {
-            headers: { "Content-type": "application/json" },
+            
+            headers,
             method,
             body: JSON.stringify(body)
         });
