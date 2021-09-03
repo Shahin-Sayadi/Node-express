@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
     <script defer src="logic.js"></script>
-    <title>Node express</title>
-  </head>
- 
-  <body>
-      <button onclick="collectText()">Hämta text</button>
-      <button onclick="saveNew()">Spara Ny</button>
-      <input id="taskInput" placeholder="skriv in tasks" type="text">
-      
-      
-      <h1 id="text"></h1> 
-  </body>
+    <link rel="stylesheet" href="./style.css">
+    <title>Node-Express</title>
+</head>
+<header>
+    <h1>
+        Vädret Just nu:
+    </h1>
+    <span id="weather"></span><span>°</span>
+</header>
+
+<body>
+    <div class="shoppingBtn" class="button">
+        <button onclick="collectText()">Hämta text</button>
+        <button onclick="saveNew()">Spara Ny</button>
+        <input id="taskInput" placeholder="Lägg till på inköpslistan" type="text">
+    </div>
+    <!-- <h6 class="shoppingList" id="text"></h1> -->
+        <table>
+            <tr>
+              
+              <th>Inköpslista</th>
+              <th >Random cat facts:
+                  <span id="catFact"></span>
+              </th>
+            </tr>
+            <tr>
+              <td id="text"></td>
+              <td style="display: flex; flex-direction: column;" id="btn"></td>
+              
+            </tr>
+            
+           
+       
+          
+          </table>
+
+</body>
+
 </html>

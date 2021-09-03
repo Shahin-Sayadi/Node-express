@@ -2,3 +2,53 @@
     box-sizing: border-box;
     margin: 0px;
 }
+
+header{
+    background-color: black;
+    margin: 0px;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.shoppingBtn{
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+}   
+
+.shoppingList{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.button{
+    height: 5px;
+    width: 20px;
+}
+

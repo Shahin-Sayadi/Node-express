@@ -23,8 +23,19 @@ server.get("/api", (req, res) => {
 
 server.post("/api", (req, res) => {
   task.push(req.body);
-  res.json(task);
+  
+  res.json("sparad");
+  
 });
+
+server.delete("/api/:id",(req,res) => {
+    const id = req.params.id
+    const index = task.findIndex((task) => task.id == id);
+    task.splice(index,1)
+    res.json(task)
+    
+
+})
 
 server.use(express.static("public"));
 
